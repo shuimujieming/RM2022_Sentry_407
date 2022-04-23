@@ -314,6 +314,7 @@ void CAN1_TX_Shoot(void)
 *@param 2：	
 *@return:：	
 */
+extern NUC_Typedef NUC_Data;
 
 void CAN2_TX_DualBoard(void)
 {
@@ -324,7 +325,7 @@ void CAN2_TX_DualBoard(void)
 	CAN2_Tx_Message.DLC = 0x08;                                                     //帧长度为8
 	CAN2_Tx_Message.StdId = 0x101;                               //帧ID为传入参数的CAN_ID
 
-	CAN2_Tx_Message.Data[0] = 1;   
+	CAN2_Tx_Message.Data[0] = NUC_Data.Armor_Type;   
 	CAN2_Tx_Message.Data[1] = 0;              
 	CAN2_Tx_Message.Data[2] = 0;           
 	CAN2_Tx_Message.Data[3] = 0;           

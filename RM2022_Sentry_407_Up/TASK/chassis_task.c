@@ -147,6 +147,10 @@ int rand_move_position = 0;
 int rand_once_flag = 0;
 //单次摇摆时间
 int round_time = 500;
+
+extern NUC_Typedef NUC_Data;
+extern Down_To_Up_Typedef  Down_To_Up_Data;
+
 /*
 *@Description：底盘自动控制
 *@param 1：	  参数1
@@ -162,6 +166,14 @@ void Chassis_Auto_Control()
 	//运动速度上限
 	Chassis_Speed.vy = 6000 * move_direction;
 
+	
+	//上下板之1 识别到目标时取消随机策略
+	if(NUC_Data.Armor_Type != 0 || Down_To_Up_Data.Target_Locked != 0)
+	{
+	 rand_once_flag = 0;
+	 rand_move_position = 0;
+	 round_time = 500;
+	}
 	
 	/*
 	底盘运动随机来回摆动策略

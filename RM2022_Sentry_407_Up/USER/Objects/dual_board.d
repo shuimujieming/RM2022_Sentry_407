@@ -4,7 +4,7 @@
 .\objects\dual_board.o: ..\SYSTEM\sys\sys.h
 .\objects\dual_board.o: ..\USER\stm32f4xx.h
 .\objects\dual_board.o: ..\CORE\core_cm4.h
-.\objects\dual_board.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\dual_board.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\dual_board.o: ..\CORE\core_cmInstr.h
 .\objects\dual_board.o: ..\CORE\core_cmFunc.h
 .\objects\dual_board.o: ..\CORE\core_cm4_simd.h
@@ -37,10 +37,10 @@
 .\objects\dual_board.o: ..\FWLIB\inc\stm32f4xx_dac.h
 .\objects\dual_board.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\dual_board.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
-.\objects\dual_board.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\dual_board.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\dual_board.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\dual_board.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\dual_board.o: ..\FreeRTOS\include\FreeRTOS.h
-.\objects\dual_board.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\dual_board.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\dual_board.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\dual_board.o: ..\FreeRTOS\include\projdefs.h
 .\objects\dual_board.o: ..\FreeRTOS\include\portable.h
@@ -74,10 +74,10 @@
 .\objects\dual_board.o: ..\HARDWARE\imu.h
 .\objects\dual_board.o: ..\HARDWARE\mpu6500.h
 .\objects\dual_board.o: ..\HARDWARE\mytype.h
-.\objects\dual_board.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\dual_board.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\dual_board.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\dual_board.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\dual_board.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\dual_board.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\dual_board.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\dual_board.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\dual_board.o: ..\HARDWARE\ist8310.h
 .\objects\dual_board.o: ..\HARDWARE\power.h
 .\objects\dual_board.o: ..\HARDWARE\nuc.h

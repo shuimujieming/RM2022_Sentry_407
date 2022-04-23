@@ -172,6 +172,8 @@ void CAN1_RX0_IRQHandler(void)
 }
 	CanRxMsg CAN2_Rx_Message;	
 
+extern Down_To_Up_Typedef  Down_To_Up_Data;
+
 /*
 *@title：CAN2接收中断函数
 *@description：
@@ -194,6 +196,7 @@ void CAN2_RX0_IRQHandler(void)
 				//下板数据
 				case 0x101:
 				{
+					Down_To_Up_Data.Target_Locked = CAN2_Rx_Message.Data[0];
 					
 				}break;	
 				default:
