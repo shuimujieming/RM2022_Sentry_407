@@ -130,11 +130,10 @@ void Gimbal_Init()
 		Pid_Reset(&PID_Gimbal_Speed[1]);
 
 		Pid_Set(&PID_Gimbal_Angle[1],2,0,0,10000,100,30000,10000,1,30000,0,2);	//Pitch
-		Pid_Set(&PID_Gimbal_Speed[1],70,0,0,30000,4000,30000,30000,1,30000,0,2); //Pitch	
-		PID_Gimbal_Speed[1].PIDOutCompensate = 3000;
+		Pid_Set(&PID_Gimbal_Speed[1],70,2,0,30000,10000,30000,30000,1,30000,0,2); //Pitch	
 
 		Pid_Set(&PID_Gimbal_Angle[0],25,0,0,30000,20,30000,10000,1,30000,0,2);	//Yaw
-		Pid_Set(&PID_Gimbal_Speed[0],100,0,10,30000,5000,30000,30000,1,30000,0,2); //Yaw
+		Pid_Set(&PID_Gimbal_Speed[0],100,1,0,30000,5000,30000,30000,1,30000,0,2); //Yaw
 	
 		//读取机器人Flash参数值
 		Gimbal_Angle_Read();

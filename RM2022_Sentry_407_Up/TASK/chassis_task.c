@@ -130,9 +130,7 @@ void Chassis_Follow_Control()
 		Chassis_Speed.vy = 0;
 	}
 	
-	
-		CAN_Storage.Target_Current = 0;		
-
+	Pid_Calc(&PID_Storage_Angle, Storage_Angle, Storage_Init_Angle);
 }
 
 //µ×ÅÌÒÆ¶¯·½Ïò
@@ -273,7 +271,7 @@ void Chassis_Stop_Control()
 	Chassis_Speed.vy = 0;
 	Chassis_Speed.vw = 0;
 	
-	CAN_Storage.Target_Current = 0;
+  Pid_Calc(&PID_Storage_Angle, Storage_Angle, Storage_Init_Angle);
 }
 
 

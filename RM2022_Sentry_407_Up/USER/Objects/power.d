@@ -4,7 +4,7 @@
 .\objects\power.o: ..\SYSTEM\sys\sys.h
 .\objects\power.o: ..\USER\stm32f4xx.h
 .\objects\power.o: ..\CORE\core_cm4.h
-.\objects\power.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\power.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\power.o: ..\CORE\core_cmInstr.h
 .\objects\power.o: ..\CORE\core_cmFunc.h
 .\objects\power.o: ..\CORE\core_cm4_simd.h
@@ -37,10 +37,10 @@
 .\objects\power.o: ..\FWLIB\inc\stm32f4xx_dac.h
 .\objects\power.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\power.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
-.\objects\power.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\power.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\power.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\power.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\power.o: ..\FreeRTOS\include\FreeRTOS.h
-.\objects\power.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\power.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\objects\power.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\power.o: ..\FreeRTOS\include\projdefs.h
 .\objects\power.o: ..\FreeRTOS\include\portable.h
@@ -74,10 +74,10 @@
 .\objects\power.o: ..\HARDWARE\imu.h
 .\objects\power.o: ..\HARDWARE\mpu6500.h
 .\objects\power.o: ..\HARDWARE\mytype.h
-.\objects\power.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-.\objects\power.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\objects\power.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\objects\power.o: D:\SoftWare\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\power.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\power.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\power.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\power.o: D:\Soft\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\power.o: ..\HARDWARE\ist8310.h
 .\objects\power.o: ..\HARDWARE\power.h
 .\objects\power.o: ..\HARDWARE\nuc.h

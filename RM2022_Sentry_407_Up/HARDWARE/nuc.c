@@ -211,6 +211,8 @@ extern short Origin_Init_Yaw_Angle;
 extern short Origin_Init_Pitch_Angle;
 
 float Yaw_Angle_NUC,Pitch_Angle_NUC,Yaw_Speed_NUC,Pitch_Speed_NUC;
+float Chassis_Speed_Real = 0;
+
 void NUC_Send_Data()
 {
    		// Yaw轴的角度就是电机编码器的真实角度,让初始时，yaw为0   
@@ -222,6 +224,9 @@ void NUC_Send_Data()
 			Yaw_Speed_NUC=((float)CAN_Gimbal[0].Current_Speed*360.0f)/(60.0f)*10.0f;
 	    //单位：度/s*10
 	    Pitch_Speed_NUC=((float)CAN_Gimbal[1].Current_Speed*360.0f)/(60.0f)*10.0f;
+	
+			Chassis_Speed_Real=(235.62f/19.0f/60.0f*(float)CAN_Chassis[0].Current_Speed);//单位mm/s
+
 			NUC_tx_buff[0]=0x7a;
 			NUC_tx_buff[2]=bit32TObit8(0,(short)Yaw_Angle_NUC);
 			NUC_tx_buff[3]=bit32TObit8(1,(short)Yaw_Angle_NUC);	
@@ -231,6 +236,10 @@ void NUC_Send_Data()
 			NUC_tx_buff[7]=shortTou8(1,(short)Pitch_Speed_NUC);
 			NUC_tx_buff[8]=shortTou8(0,(short)Yaw_Speed_NUC);
 			NUC_tx_buff[9]=shortTou8(1,(short)Yaw_Speed_NUC);	
+
+
+    	NUC_tx_buff[14]=shortTou8(0,(short)Chassis_Speed_Real);//速度，单位mm/s
+	    NUC_tx_buff[15]=shortTou8(1,(short)Chassis_Speed_Real);
 
 			NUC_tx_buff[18]=shortTou8(0,(short)Pitch_Angle_NUC);
 			NUC_tx_buff[19]=shortTou8(1,(short)Pitch_Angle_NUC);
@@ -249,7 +258,12 @@ void NUC_Data_Decode(uint8_t *buff)
 		NUC_Data.Yaw_Angle   = (short)(buff[2] << 8 | buff[1]);
 		NUC_Data.Pitch_Angle = (short)(buff[4] << 8 | buff[3]);
 		
+		
 		NUC_Data.Armor_Type  =  buff[6]; //装甲类型 0未识别到 1小装甲 2大装甲
+		
+		//0为手动，1自动
+		NUC_Data.Auto_Shoot  =  buff[5];
+		
 		
 		if(NUC_Data.Armor_Type == 0)
 		{

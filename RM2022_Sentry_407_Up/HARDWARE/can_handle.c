@@ -346,7 +346,7 @@ void CAN1_TX_Shoot(void)
 *@param 2：	
 *@return:：	
 */
-
+extern float Chassis_Speed_Real;
 void CAN2_TX_DualBoard(void)
 {
 	CanTxMsg CAN2_Tx_Message;
@@ -364,6 +364,35 @@ void CAN2_TX_DualBoard(void)
 	CAN2_Tx_Message.Data[5] = (DBUS.RC.ch4)&0xff;              
 	CAN2_Tx_Message.Data[6] = DBUS.RC.Switch_Left;               
 	CAN2_Tx_Message.Data[7] = DBUS.RC.Switch_Right;        
+
+	CAN2_Tx_Message_Flag = 0;
+	//哨兵上下头通信问题，不能同时失去信号，所以必须上头要一直发
+	//CAN2掉线处理
+//	if(CAN2_Signal > 0)
+	{
+		CAN_Transmit(CAN2,&CAN2_Tx_Message);
+	}
+	
+	while(CAN2_Tx_Message_Flag == 0)
+	{
+		if(CAN2_Signal <= 0)
+		{
+			break;
+		}
+	}
+	
+	
+	
+	CAN2_Tx_Message.StdId = 0x103;                               //帧ID为传入参数的CAN_ID
+
+	CAN2_Tx_Message.Data[0] = ((short)Chassis_Speed_Real>>8)&0xff;   
+	CAN2_Tx_Message.Data[1] = ((short)Chassis_Speed_Real)&0xff;              
+	CAN2_Tx_Message.Data[2] = 0;   
+	CAN2_Tx_Message.Data[3] = 0;          
+	CAN2_Tx_Message.Data[4] = 0;   
+	CAN2_Tx_Message.Data[5] = 0;              
+	CAN2_Tx_Message.Data[6] = 0;               
+	CAN2_Tx_Message.Data[7] = 0;        
 
 	CAN2_Tx_Message_Flag = 0;
 	//哨兵上下头通信问题，不能同时失去信号，所以必须上头要一直发

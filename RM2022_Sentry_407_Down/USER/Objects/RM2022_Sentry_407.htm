@@ -3,11 +3,7 @@
 <title>Static Call Graph - [.\Objects\RM2022_Sentry_407.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\RM2022_Sentry_407.axf</H1><HR>
-<<<<<<< HEAD
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Apr 23 14:38:21 2022
-=======
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Apr 17 13:08:20 2022
->>>>>>> 86ac1234277881f40ffa01130adcf5e9414c0f74
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun May 08 16:35:30 2022
 <BR><P>
 <H3>Maximum Stack Usage =        240 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -870,7 +866,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN12_Init
 </UL>
 
-<P><STRONG><a name="[4c]"></a>CAN2_RX0_IRQHandler</STRONG> (Thumb, 146 bytes, Stack size 8 bytes, can_handle.o(i.CAN2_RX0_IRQHandler))
+<P><STRONG><a name="[4c]"></a>CAN2_RX0_IRQHandler</STRONG> (Thumb, 188 bytes, Stack size 8 bytes, can_handle.o(i.CAN2_RX0_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = CAN2_RX0_IRQHandler &rArr; CAN_GetITStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Receive
@@ -1222,7 +1218,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_task
 </UL>
 
-<P><STRONG><a name="[13d]"></a>Get_Cover_Mode</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, mode_task.o(i.Get_Cover_Mode))
+<P><STRONG><a name="[13d]"></a>Get_Cover_Mode</STRONG> (Thumb, 146 bytes, Stack size 0 bytes, mode_task.o(i.Get_Cover_Mode))
 <BR><BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mode_task
 </UL>
 
@@ -1270,7 +1266,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gimbal_task
 </UL>
 
-<P><STRONG><a name="[ae]"></a>Gimbal_Init</STRONG> (Thumb, 464 bytes, Stack size 8 bytes, gimbal.o(i.Gimbal_Init))
+<P><STRONG><a name="[ae]"></a>Gimbal_Init</STRONG> (Thumb, 454 bytes, Stack size 8 bytes, gimbal.o(i.Gimbal_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = Gimbal_Init &rArr; Gimbal_Angle_Read &rArr; delay_ms &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
@@ -1358,7 +1354,7 @@ Global Symbols
 <P><STRONG><a name="[3]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.NMI_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(RESET)
 </UL>
-<P><STRONG><a name="[117]"></a>NUC_Data_Decode</STRONG> (Thumb, 158 bytes, Stack size 0 bytes, nuc.o(i.NUC_Data_Decode))
+<P><STRONG><a name="[117]"></a>NUC_Data_Decode</STRONG> (Thumb, 162 bytes, Stack size 0 bytes, nuc.o(i.NUC_Data_Decode))
 <BR><BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
@@ -1372,7 +1368,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Init
 </UL>
 
-<P><STRONG><a name="[fd]"></a>NUC_Send_Data</STRONG> (Thumb, 474 bytes, Stack size 8 bytes, nuc.o(i.NUC_Send_Data))
+<P><STRONG><a name="[fd]"></a>NUC_Send_Data</STRONG> (Thumb, 526 bytes, Stack size 8 bytes, nuc.o(i.NUC_Send_Data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NUC_Send_Data &rArr; shortTou8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;shortTou8

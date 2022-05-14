@@ -145,6 +145,7 @@ void CAN1_RX0_IRQHandler(void)
 *@return:£º	
 */
 extern int 	DR16_Signal ;
+extern float Chassis_Speed_Real;
 
 CanRxMsg CAN2_Rx_Message;	
 
@@ -171,6 +172,10 @@ void CAN2_RX0_IRQHandler(void)
 					DBUS.RC.Switch_Left = CAN2_Rx_Message.Data[6];
 					DBUS.RC.Switch_Right = CAN2_Rx_Message.Data[7];
 				}break;	
+				case 0x103:
+				{
+					Chassis_Speed_Real = ((int16_t)(CAN2_Rx_Message.Data[0] << 8 | CAN2_Rx_Message.Data[1]));
+				}break;			
 				
 				default:
 				{

@@ -150,7 +150,7 @@ void Gimbal_Init()
 
 	  //集中对pid赋值 
 		Pid_Set(&PID_Gimbal_Angle[1],2,0,0,10000,0,30000,10000,1,30000,0,2);	//Pitch
-		Pid_Set(&PID_Gimbal_Speed[1],70,1,0,30000,10000,30000,30000,1,30000,0,2); //Pitch
+		Pid_Set(&PID_Gimbal_Speed[1],60,0,0,30000,10000,30000,30000,1,30000,0,2); //Pitch
 
 	
 		Pid_Set(&PID_Gimbal_Angle[0],1.5,0,0,10000,3000,30000,10000,1,30000,0,2);	//Yaw

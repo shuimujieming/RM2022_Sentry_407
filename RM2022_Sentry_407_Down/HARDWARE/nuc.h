@@ -18,6 +18,8 @@ typedef struct
 	char   Armor_ID;               //µÐ·½×°¼×ºÅÂë
 	short  Enemy_Real_Speed;
 	char   NUC_Shoot_Allow_Flag;
+	char   Auto_Shoot;
+
 }NUC_Typedef;
 
 #endif

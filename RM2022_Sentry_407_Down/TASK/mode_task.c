@@ -207,13 +207,17 @@ void Get_Cover_Mode()
 	//自瞄模式下自动击打
 	if(Gimbal_Mode == GIMBAL_MODE_AUTOAIM)
 	{
-		if(NUC_Data.NUC_Shoot_Allow_Flag == 1)
+		//自动
+		if(NUC_Data.Auto_Shoot == 1)
 		{
-			Cover_Mode = COVER_MODE_OPEN;
-		}		
-		else
-		{
-			Cover_Mode = COVER_MODE_CLOSE;			
+			if(NUC_Data.NUC_Shoot_Allow_Flag == 1)
+			{
+				Cover_Mode = COVER_MODE_OPEN;
+			}		
+			else
+			{
+				Cover_Mode = COVER_MODE_CLOSE;			
+			}			
 		}
 	}
 	
